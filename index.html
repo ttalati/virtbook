@@ -25,17 +25,29 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid bg-dark">
-            <div class="row">
-                <div class="col text-center">
-                    <a class="navbar-brand text-light" href="#">
-                        <h1>virtbook</h1>
-                    </a>
-                </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">
+                <h1>virtbook</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="loginpage.html">Log in
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
     <div class="jumbotron text-center mb-0">
         <div class="container my-5">
             <h1 class="display-3">Yearbook Signatures Done <strong>Virtually.</strong></h1>
@@ -59,7 +71,8 @@
             </div>
             <div class="col">
                 <p class="h5">Connect with anyone, anywhere</p>
-                <p class="lead">Share the love by sending over your caring signatures to anywhere no matter the distance.</p>
+                <p class="lead">Share the love by sending over your caring signatures to anywhere no matter the
+                    distance.</p>
             </div>
         </div>
         <div class="row pb-5 px-3">
@@ -107,4 +120,5 @@
         firebase.analytics();
     </script>
 </body>
+
 </html>
