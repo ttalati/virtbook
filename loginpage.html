@@ -25,49 +25,86 @@
         crossorigin="anonymous"></script>
 </head>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top">
-    <div class="container">
-        <a class="navbar-brand text-light" href="index.html">
-            <h1>virtbook</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Log in
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<body>
 
-<main role="main" class="container">
-    <p class="h1 text-dark text-center my-5">Sign In and Get Started:</p>
-    <div class="card-deck text-center my-5">
-        <div class="card bg-light">
-            <div class="card-header text-uppercase">
-                Google
-            </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-google btn-primary"><i class="fa fa-google mr-2"></i> Sign in with Google</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand text-light" href="index.html">
+                <h1>virtbook</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Log in
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="card bg-light">
-            <div class="card-header text-uppercase">
-                Facebook
+    </nav>
+
+    <main role="main" class="container">
+        <p class="h1 text-dark text-center my-5">Sign In and Get Started:</p>
+        <div class="card-deck text-center my-5">
+            <div class="card bg-light">
+                <div class="card-header text-uppercase">
+                    Google
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-google btn-primary"><i class="fa fa-google mr-2"></i> Sign in with
+                        Google</a>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="#" class="btn btn-facebook btn-primary"><i class="fa fa-facebook-f mr-2"></i>Sign in with Facebook</i></a>
+            <div class="card bg-light">
+                <div class="card-header text-uppercase">
+                    Facebook
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-facebook btn-primary"><i class="fa fa-facebook-f mr-2"></i>Sign in with
+                        Facebook</i></a>
+                </div>
             </div>
-        </div>
-</main>
+    </main>
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAwS-N5-nXqDBEWgZmOR-xdpw7JqA633Fg",
+            authDomain: "virtbook-d4058.firebaseapp.com",
+            databaseURL: "https://virtbook-d4058.firebaseio.com",
+            projectId: "virtbook-d4058",
+            storageBucket: "virtbook-d4058.appspot.com",
+            messagingSenderId: "206125144618",
+            appId: "1:206125144618:web:b0ae9c12cbfaf7a53b8153",
+            measurementId: "G-NTJNZTZ3SM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+
 </html>
