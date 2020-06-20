@@ -16,16 +16,7 @@ firebase.analytics();
 
 document.getElementById("work").addEventListener("click", signInFunction);
 
-function signOut() {
-    firebase.auth().signOut().then(function () {
-        console.log("nice");
-        window.location.replace("index.html");
-        // Sign-out successful.
 
-    }).catch(function (error) {
-        // An error happened.
-    });
-}
 
 function loadPage() {
 
@@ -52,8 +43,7 @@ function loadPage() {
         // ...
     });
 }
-function signInFunction()
-{
+function signInFunction() {
     loadPage();
 }
 

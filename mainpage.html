@@ -29,8 +29,6 @@
 </head>
 
 <body>
-
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top">
         <div class="container">
@@ -56,6 +54,15 @@
         </div>
     </nav>
 
+    <main id="main">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4" id="modify">Welcome!</h1>
+                <p class="lead">Scroll Down to see your messages or start by sending out the form.</p>
+            </div>
+        </div>
+    </main>
+
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
 
@@ -64,6 +71,7 @@
 
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
     <script>var firebaseConfig = {
             apiKey: "AIzaSyAwS-N5-nXqDBEWgZmOR-xdpw7JqA633Fg",
@@ -74,8 +82,17 @@
             messagingSenderId: "206125144618",
             appId: "1:206125144618:web:b0ae9c12cbfaf7a53b8153",
             measurementId: "G-NTJNZTZ3SM"
-        };</script>
-    <script src="login.js"></script>
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+    </script>
+    <script src="mainpage.js"></script>
+
+
 </body>
 
 </html>
