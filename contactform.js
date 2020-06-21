@@ -20,11 +20,9 @@ function submitForm(e) {
     console.log(user.email);
     var senderEmail = user.email;
     var senderName = user.displayName;
-    var rEmail = document.getElementById("Email").value;
-    var rName = document.getElementById("name").value;
     var message = document.getElementById("text").value;
 
-    saveMessage(rName, message, senderEmail, senderName, rEmail);
+    saveMessage(message, senderEmail, senderName);
 
     redirect();
 }
@@ -34,15 +32,14 @@ function redirect()
     window.location.replace("success.html")
 }
 
-function saveMessage(rName, message, senderEmail, senderName, rEmail)
+function saveMessage(message, senderEmail, senderName)
 {
-    var messagesRef = firebase.database().ref("messages/" + rName)
+    var messagesRef = firebase.database().ref("devMessage")
     var newMessagesRef = messagesRef.push();
     newMessagesRef.set({
         senderEmail: senderEmail,
         message: message,
         senderName: senderName,
-        rEmail: rEmail
     })
 }
 
