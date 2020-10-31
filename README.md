@@ -1,5 +1,5 @@
 # virtbook
-A virtual yearbook
+A virtual yearbook where users can sign yearbooks virtually.
 
 
 https://dead-sand.surge.sh/
